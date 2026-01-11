@@ -187,7 +187,7 @@ DBS.callNextEventAction = async function (type, varsE, index) {
 };
 
 DBS.startBot = async function () {
-  await DBS.Bot.login(DBS.SettingsFile.token)
+  await DBS.Bot.login(process.env.DISCORD_TOKEN)
     .then((value) => {
       process.send("success");
     })
@@ -694,3 +694,5 @@ function deepSearchItems(object, key, predicate) {
   }
   return ret;
 }
+
+DBS.startBot();
