@@ -1,0 +1,46 @@
+[{
+  "1044309682585604096": "1"
+},{
+  "reactionmenu": "2"
+},{
+  "channelId": "3",
+  "guildId": "4",
+  "deleted": false,
+  "id": "5",
+  "type": "6",
+  "system": false,
+  "content": "7",
+  "authorId": "8",
+  "pinned": false,
+  "tts": false,
+  "nonce": null,
+  "embeds": "9",
+  "components": "10",
+  "attachments": "11",
+  "stickers": "12",
+  "createdTimestamp": 1692645864633,
+  "editedTimestamp": null,
+  "webhookId": null,
+  "groupActivityApplicationId": null,
+  "applicationId": null,
+  "activity": null,
+  "flags": 0,
+  "reference": null,
+  "interaction": null,
+  "cleanContent": "7"
+},"1137809192363765780","1044309682585604096","1143264361612324894","DEFAULT","","1143221079729504306",[
+  "13"
+],[],[],[],{
+  "type": "14",
+  "title": "15",
+  "description": "16",
+  "url": null,
+  "color": 16105222,
+  "timestamp": null,
+  "fields": "17",
+  "thumbnail": null,
+  "image": null,
+  "video": null,
+  "provider": null,
+  "footer": null
+},"rich","Test Reaction Collector","Reagiere mit um xy zu erhalten usw.",[]]

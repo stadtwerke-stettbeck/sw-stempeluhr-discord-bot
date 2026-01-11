@@ -1,0 +1,357 @@
+{
+  "command": [
+    {
+      "name": "User Joins Server",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "user": "newuser"
+      }
+    },
+    {
+      "name": "Any Message",
+      "perms": [],
+      "actions": [],
+      "var": {}
+    },
+    {
+      "name": "User Kicked",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "user": "kickuser"
+      }
+    },
+    {
+      "name": "User Banned",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "user": "banuser"
+      }
+    },
+    {
+      "name": "Bot Initialization",
+      "perms": [],
+      "actions": [],
+      "var": {}
+    },
+    {
+      "name": "Channel Create",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": "createdchannel"
+      }
+    },
+    {
+      "name": "Channel Delete",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": "deletedchannel"
+      }
+    },
+    {
+      "name": "Channel Pins Update",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": "updatepinschannel"
+      }
+    },
+    {
+      "name": "Channel Update",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": "updatechannel"
+      }
+    },
+    {
+      "name": "Emoji Create",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": "createdemoji"
+      }
+    },
+    {
+      "name": "Emoji Delete",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": "deletedemoji"
+      }
+    },
+    {
+      "name": "Emoji Update",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": "updatedemoji"
+      }
+    },
+    {
+      "name": "Guild Ban Remove",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Guild Create",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Guild Delete",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Guild Member Available",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Guild Member Speaking",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Guild Member Update",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Guild Unavailable",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Guild Update",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Message Delete",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Message Update",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Role Create",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Role Delete",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Role Update",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Typing Start",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "User Update",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Button Interaction",
+      "perms": [],
+      "actions": [
+        {
+          "name": "roleCase",
+          "category": "Control",
+          "type": "Switch Case",
+          "valueActions": {
+            "imdienst": [
+              {
+                "name": "roleCheck",
+                "category": "User Action",
+                "type": "Check If User Has Role",
+                "trueActions": [
+                  {
+                    "name": "roleRemove",
+                    "category": "User Action",
+                    "type": "Remove Role From User",
+                    "messageActionRows": [],
+                    "user": "${tempVars.buttoninteraction.member.id}",
+                    "rolename": "[Im Dienst]",
+                    "reason": "Remove role button clicked."
+                  },
+                  {
+                    "name": "roleReply_2",
+                    "category": "Interaction",
+                    "type": "Reply To Interaction With Message",
+                    "messageActionRows": [],
+                    "interactionobject": "${tempVars.buttoninteraction}",
+                    "messagetext": "Du hast dich ***ausgestempelt*** und wirst nach 15 Minuten in der Statistik nicht mehr als *[Im Dienst]* gezählt. **Für die Führungsebene wirst du allerdings direkt als ausgestempelt angezeigt!**"
+                  },
+                  {
+                    "name": "Ausstempeln [Im Dienst]",
+                    "category": "Message",
+                    "type": "Send Embed",
+                    "messageActionRows": [],
+                    "channelname": "1459929939850690652",
+                    "color": "FF3D3D",
+                    "title": "Ausgestempelt",
+                    "url": "",
+                    "authorname": "",
+                    "authorimageurl": "",
+                    "authorlink": "",
+                    "description": "> Der Mitarbeiter **${tempVars.buttoninteraction.member.nickname}** hat sich soeben <:xicons:1459928371067752559> *ausgestempelt* <:xicons:1459928371067752559>.",
+                    "thumbnail": "",
+                    "image": "",
+                    "footer": "",
+                    "timestamp": "false",
+                    "savetovariable": "",
+                    "savetovariabletype": "temp"
+                  }
+                ],
+                "falseActions": [
+                  {
+                    "name": "roleCheckPermission",
+                    "category": "User Action",
+                    "type": "Check If User Has Role",
+                    "trueActions": [
+                      {
+                        "name": "roleAdd",
+                        "category": "User Action",
+                        "type": "Add Role to User",
+                        "messageActionRows": [],
+                        "user": "${tempVars.buttoninteraction.member.id}",
+                        "rolename": "[Im Dienst]"
+                      },
+                      {
+                        "name": "roleReply",
+                        "category": "Interaction",
+                        "type": "Reply To Interaction With Message",
+                        "messageActionRows": [],
+                        "interactionobject": "${tempVars.buttoninteraction}",
+                        "messagetext": "Du hast dich ***eingestempelt*** und wirst als *[Im Dienst]* nach 15 Minuten in der Statistik gezählt. **Für die Führungsebene wirst du allerdings direkt als eingestempelt angezeigt!**"
+                      },
+                      {
+                        "name": "Einstempeln [Im Dienst]",
+                        "category": "Message",
+                        "type": "Send Embed",
+                        "messageActionRows": [],
+                        "channelname": "1459929939850690652",
+                        "color": "4AFF59",
+                        "title": "Eingestempelt",
+                        "url": "",
+                        "authorname": "",
+                        "authorimageurl": "",
+                        "authorlink": "",
+                        "description": "> Der Mitarbeiter **${tempVars.buttoninteraction.member.nickname}** hat sich soeben <:eicons:1459928360309227560> *eingestempelt* <:eicons:1459928360309227560>.",
+                        "thumbnail": "",
+                        "image": "",
+                        "footer": "",
+                        "timestamp": "false",
+                        "savetovariable": "",
+                        "savetovariabletype": "temp"
+                      }
+                    ],
+                    "falseActions": [
+                      {
+                        "name": "permissionReply",
+                        "category": "Interaction",
+                        "type": "Reply To Interaction With Message",
+                        "messageActionRows": [],
+                        "interactionobject": "${tempVars.buttoninteraction}",
+                        "messagetext": "Du bist kein Mitarbeiter der **Stadtwerke**!"
+                      }
+                    ],
+                    "messageActionRows": [],
+                    "user": "${tempVars.buttoninteraction.member.id}",
+                    "role": "⠀⠀⠀⠀⠀⠀» Fachkräfte & Spezialisten «⠀⠀⠀⠀⠀⠀"
+                  }
+                ],
+                "messageActionRows": [],
+                "user": "${tempVars.buttoninteraction.member.id}",
+                "role": "[Im Dienst]"
+              }
+            ]
+          },
+          "messageActionRows": [],
+          "varname": "${tempVars.buttoninteraction.customId}"
+        }
+      ],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Select Interaction",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Command Interaction",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    }
+  ]
+}
